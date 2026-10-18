@@ -9,7 +9,8 @@ repository (`../backend/STATUS.md`).
 | Results tab (key numbers, charts, tables) | ✅ Done; shows Week 1 data, will show Weeks 2-5 after export |
 | Ask the agent tab (live, Server-Sent Events) | ✅ Done; tested end to end with the backend |
 | About tab | ✅ Done |
-| GitHub Pages deployment from `docs/` | ⏳ Create the GitHub repository and enable Pages |
+| GitHub repository: `Carlos28042003/agent-profilling-fontend` | ✅ Pushed |
+| GitHub Pages deployment from `docs/` | ⏳ Enable in Settings → Pages (`main` / `docs`) |
 | Final results (Weeks 2-5) on the page | ⏳ After the experiments |
 
 ---
@@ -79,18 +80,13 @@ git push
 
 ---
 
-## 3. Publishing the repository (to do)
+## 3. Publishing
 
-1. On GitHub: **New repository**, for example `agentic-profiling-frontend` (empty: no README,
-   no .gitignore).
-2. Here:
-   ```powershell
-   cd C:\dev\agentic-profiling\frontend
-   git remote add origin https://github.com/Carlos28042003/agentic-profiling-frontend.git
-   git push -u origin main
-   ```
-3. On GitHub: **Settings → Pages → Deploy from a branch → `main` / `docs`**.
-4. If you choose another repository name, update the link in the backend README.
+- Repository: https://github.com/Carlos28042003/agent-profilling-fontend (remote `origin`,
+  branch `main`). After changes: `git add -A`, `git commit -m "..."`, `git push`.
+- **To do once:** on GitHub, **Settings → Pages → Deploy from a branch → `main` / `docs`**.
+  The site will be at https://carlos28042003.github.io/agent-profilling-fontend/.
+- Commits list only Carlos Chirindza as author (no co-authors).
 
 ---
 
