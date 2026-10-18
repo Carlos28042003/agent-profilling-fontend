@@ -1,0 +1,17 @@
+# Dependencies (installed with `npm install`)
+node_modules/
+
+# Vite cache and local builds (the production build goes to docs/ and IS committed for GitHub Pages)
+dist/
+.vite/
+
+# Logs
+npm-debug.log*
+*.log
+
+# Environment and editor files
+.env
+.env.*
+.DS_Store
+.vscode/
+.idea/
