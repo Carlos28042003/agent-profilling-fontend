@@ -6,7 +6,6 @@ import Results from "./pages/Results.jsx";
 const TABS = [["results", "Results"], ["ask", "Ask the agent"], ["about", "About"]];
 
 export default function App() {
-  // null = checking, false = static site (GitHub Pages), object = local backend is running
   const [api, setApi] = useState(null);
   const [tab, setTabState] = useState(() => {
     const hash = window.location.hash.slice(1);
@@ -14,7 +13,7 @@ export default function App() {
   });
   const setTab = (k) => {
     setTabState(k);
-    window.history.replaceState(null, "", `#${k}`);  // tabs are linkable: .../#ask
+    window.history.replaceState(null, "", `#${k}`);
   };
 
   useEffect(() => {

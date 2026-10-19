@@ -1,9 +1,3 @@
-// Copy the experiment data exported by the backend into src/data.json.
-//
-//   npm run sync-data                      # backend repository next to this one (../backend)
-//   BACKEND_DIR=/path/to/backend npm run sync-data
-//
-// In the backend, `uv run agentic-export ...` writes results/data.json.
 import { copyFileSync, existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";

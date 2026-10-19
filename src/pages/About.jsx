@@ -1,21 +1,18 @@
 const BACKEND_REPO = "https://github.com/Carlos28042003/agent-profilling";
 
-const RUN = `# One folder with the two repositories side by side
-mkdir agentic-profiling && cd agentic-profiling
+const RUN = `mkdir agentic-profiling && cd agentic-profiling
 git clone ${BACKEND_REPO}.git backend
 git clone <frontend repository> frontend
 
-# Frontend (this page)
 cd frontend
 npm install
-npm run build            # -> frontend/docs
+npm run build
 
-# Backend (the agent and the experiments)
 cd ../backend
 uv sync
 ollama pull llama3.2:3b
 ollama create llama3.2:3b-ctx8k -f configs/ollama/llama3.2-ctx8k.Modelfile
-uv run agentic-ui        # this page + the live agent on http://localhost:8000`;
+uv run agentic-ui`;
 
 export default function About() {
   return (

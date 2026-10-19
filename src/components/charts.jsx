@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import { fmt, SERIES } from "../lib/format.js";
 import { Legend, Tooltip } from "./ui.jsx";
 
-/** Prompt tokens vs. cached tokens for each step of one task. */
 export function StepTokensChart({ steps }) {
   const [tip, setTip] = useState(null);
   const wrap = useRef(null);
@@ -58,7 +57,6 @@ export function StepTokensChart({ steps }) {
   );
 }
 
-/** Share of task time in LLM / tools / overhead, one bar per run (older experiments). */
 export function TimeBreakdown({ runs }) {
   const [tip, setTip] = useState(null);
   const wrap = useRef(null);
@@ -92,7 +90,6 @@ export function TimeBreakdown({ runs }) {
   );
 }
 
-/** Prefill / decode / tools / overhead split, one bar per workload (Week 3+). */
 export function TimeSplit({ split }) {
   const parts = [["Prefill (TTFT)", "prefill (TTFT)", "var(--series-1)"], ["Decode", "decode", "var(--series-2)"],
                  ["Tools", "tools", "var(--series-3)"], ["Overhead", "overhead", "var(--series-4)"]];
@@ -117,10 +114,6 @@ export function TimeSplit({ split }) {
   );
 }
 
-/**
- * Line chart with optional 25th-75th percentile band, or a step line for CDFs.
- * series: [{ name, points: [{ x, y, lo?, hi? }] }]
- */
 export function LineChart({ series, xLabel, yLabel, yMax, band, stepLine,
                             fmtY = (v) => v.toLocaleString(), fmtX = (v) => v }) {
   const [tip, setTip] = useState(null);
@@ -184,7 +177,6 @@ export function LineChart({ series, xLabel, yLabel, yMax, band, stepLine,
   );
 }
 
-/** Horizontal bars of throughput (tasks per minute), one per setup. */
 export function ThroughputBars({ rows }) {
   const maxT = Math.max(...rows.map((r) => r.tasks_per_min || 0), 1);
   return (

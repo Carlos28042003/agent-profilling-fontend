@@ -5,8 +5,6 @@ import { CompareTable, RunsTable, TaskGrid } from "../components/tables.jsx";
 import { Legend, Section, Stat } from "../components/ui.jsx";
 import { fmt, mean, SERIES } from "../lib/format.js";
 
-// data.json comes from the backend (`uv run agentic-export`, then `npm run sync-data`); never edit it by hand.
-
 const pct = (xs, q) => xs[Math.floor(q * (xs.length - 1))];
 
 function KeyNumbers({ exp }) {

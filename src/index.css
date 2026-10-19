@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-/* Color tokens: the validated categorical palette (blue, orange, aqua, yellow) with
-   separate light and dark steps. Charts and text read these, never raw hex. */
 :root {
   color-scheme: light;
   --surface-0: #f5f5f3;
