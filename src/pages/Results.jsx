@@ -81,7 +81,7 @@ function Experiment({ exp }) {
 
 export default function Results() {
   const exps = DATA.experiments || [];
-  const [sel, setSel] = useState(exps.length ? exps[exps.length - 1].id : null);
+  const [sel, setSel] = useState((exps.find((e) => e.id === "week4-gsm8k") ?? exps[exps.length - 1])?.id ?? null);
   const exp = exps.find((e) => e.id === sel);
   if (!exp) {
     return (
