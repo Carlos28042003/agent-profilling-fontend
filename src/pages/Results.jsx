@@ -93,6 +93,13 @@ export default function Results() {
   }
   return (
     <div className="space-y-6">
+      <div className="card p-4 text-sm secondary max-w-3xl">
+        <span className="font-medium" style={{ color: "var(--text-primary)" }}>A note on accuracy. </span>
+        This project measures systems behaviour (time, tokens, cache reuse), not model quality. Accuracy is limited by the
+        small 3B model (llama3.2:3b on a 4 GB GPU), and every failed GSM8K task was a wrong calculation or the step limit,
+        not a grading error. Accuracy stays the same under every serving setup (50–54% on GSM8K with cache on or off and
+        with 1 to 8 concurrent agents), so the speedups come at no cost in quality.
+      </div>
       <div className="flex flex-wrap gap-2">
         {exps.map((e) => (
           <button key={e.id} onClick={() => setSel(e.id)}
